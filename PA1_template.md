@@ -85,7 +85,7 @@ Make a histogram of the total number of steps taken each day and Calculate and r
 dataset <- aggregate(steps~date,new.activity,sum,na.rm=T)
 g <- ggplot(dataset, aes(date, steps))
 g <- g + geom_histogram(stat="identity", colour="white")
-g <- g + ggtitle("Histogram of the total number of steps taken each day after imputing missing values")
+g <- g + ggtitle("Histogram of the total number of steps taken each day \n after imputing missing values")
 g <- g + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 print(g)
 ```
@@ -98,9 +98,6 @@ median_tot_num_of_steps <- median(dataset$steps)
 ```
 
 After imputing missing values, the mean for total number of steps is 1.0766 &times; 10<sup>4</sup>, and the median for total number of steps is 1.0762 &times; 10<sup>4</sup>.
-
-Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
-
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
